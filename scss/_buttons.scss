@@ -1,0 +1,47 @@
+button {
+  background-color: transparent;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+}
+
+.delete {
+  height: 40px;
+  width: 40px;
+
+  &:after {
+    content: "";
+    width: 24px;
+    height: 24px;
+    background-image: url(./delete_black_24dp.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &:hover:before {
+    width: 24px;
+    height: 24px;
+    background-color: turquoise;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+.add {
+  height: 32px;
+  width: 32px;
+  position: absolute;
+  right: 0;
+  top: 24px;
+  z-index: 2;
+
+  &:after {
+    content: "";
+    width: 24px;
+    height: 24px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}

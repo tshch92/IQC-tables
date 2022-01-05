@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  min-height: 600px;
+}
+
+@import "buttons";
+
+table {
+  border-collapse: collapse;
+  margin: 200px;
+}
+
+.table-header {
+    font-size: 12px;
+
+}
+
+tr {
+  border: 0;
+  border-spacing: 0;
+  height: 40px;
+
+  &:hover {
+    //background-color: hotpink;
+
+    & .add{
+    background-color: white;
+    
+    &:after {
+      background-image: url(./add_black_24dp.svg);
+    }}
+  }
+}
+
+td {
+  position: relative;
+  z-index: 1;
+  min-width: 32px;
+  padding: 0 6px;
+  border-bottom: 1px solid grey;
+   
+  &:first-child {
+    padding: 0;
+    border: 1px solid white;
+  }
+
+  &:last-child {
+    padding-left: 0;
+  }
+}
+
+.input {
+  &-group {
+    height: 100%;
+    border-bottom: 1px solid gray;
+  }
+
+  &-text {
+      font-size: 14px;
+    display: flex;
+    height: 40px;
+    border: 0;
+    align-items: center;
+    box-sizing: border-box;
+    border-bottom: 1px solid white;
+
+    &:hover {
+      border-bottom: 1px solid gray;
+    }
+
+    &:focus {
+      border-bottom: 1px solid blue;
+      outline: none;
+    }
+  }
+
+  &-checkbox {
+    text-align: center;
+  }
+}
