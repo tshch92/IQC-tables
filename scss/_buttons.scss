@@ -15,7 +15,7 @@ button {
     content: "";
     width: 24px;
     height: 24px;
-    background-image: url(./delete_black_24dp.svg);
+    background-image: url(./delete_forever_black_24dp.svg);
     background-position: center;
     background-repeat: no-repeat;
   }
@@ -33,15 +33,27 @@ button {
   height: 32px;
   width: 32px;
   position: absolute;
-  right: 0;
+  right: -16px;
   top: 24px;
   z-index: 2;
 
+  &:hover::after{
+    background-color: blue;
+    background-image: url(./add_white_24dp.svg);
+    border: 1px solid blue;
+  }
+
   &:after {
     content: "";
-    width: 24px;
-    height: 24px;
+    width: 16px;
+    height: 16px;
     background-position: center;
     background-repeat: no-repeat;
+    background-size: 90%;
+    border: 1px solid grey;
+    border-radius: 50%;
+    box-sizing: border-box;
+    background-color: white;
+    background-image: url(./add_black_24dp.svg);
   }
 }
